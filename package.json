@@ -1,0 +1,17 @@
+{
+  "name": "learn-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.8.4",
+    "ngrok": "^2.2.11",
+    "nodejieba": "^2.2.5",
+    "restify": "^5.0.0"
+  }
+}
