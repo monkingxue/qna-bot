@@ -4,6 +4,7 @@
 const axios = require('axios');
 
 const {knowledgeBaseID, qnaKey} = require('./config');
+const {testLog} = require('./util');
 
 const qna = axios.create({
   headers: {
@@ -20,7 +21,10 @@ const getAnswer = (text) =>
   qna.post(getUrl(knowledgeBaseID), {
     question: text,
     top: 1
-  }).then(res => res.data.answers)
+  }).then(res => {
+    testLog(res.data);
+    return res.data.answers
+  })
     .then(answers => answers.map(item => item.answer).join(''))
     .catch(err => console.error(err));
 
