@@ -17,12 +17,13 @@ function main(input) {
   modifyContext(subModel);
   testLog(subModel, sentence, judgment, context, composeSub(context) + sentence);
   if (judgment) {
-    return getLuisResult(sentence)
-      .then(result => composeSub(context) + result)
-      .then(question => {
-        testLog(question);
-        return getAnswer(question)
-      })
+    // return getLuisResult(sentence)
+    //   .then(result => composeSub(context) + result)
+    //   .then(question => {
+    //     testLog(question);
+    //     return
+    //   })
+    return getAnswer(composeSub(context) + sentence)
       .then(answer => {
         testLog(answer, input);
         return fuzz.partial_ratio(answer, input) >= 80
