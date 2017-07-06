@@ -99,6 +99,7 @@ exports.g_words = [
 ];
 exports.i_words = [
   '学生',
+  '国际学生',
   '老师',
   '教师',
   '教授',
